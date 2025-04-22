@@ -1,1 +1,9 @@
-npm test
+#!/bin/sh
+
+npm run prettier
+if [ $? -ne 0 ]; then
+  echo "🛑 Prettier check failed. Fix it before committing."
+  exit 1
+else
+  echo "🟢 Prettier check is successful."
+fi
