@@ -2,7 +2,7 @@
 
 npm run prettier
 if [ $? -ne 0 ]; then
-  echo "🛑 Prettier check failed. Fix it before committing."
+  echo "🛑 Prettier check failed. Remember to re-stage the files after fixing them."
   exit 1
 else
   echo "🟢 Prettier check is successful."
