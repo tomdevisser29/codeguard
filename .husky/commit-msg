@@ -9,8 +9,12 @@ if ! echo "$commit_msg" | grep -qE '^(Added|Changed|Fixed)'; then
   exit 1
 fi
 
+echo "🟢 Commit message has the correct prefix."
+
 # Check if the commit message is at least 10 characters long
-if [ ${#commit_msg} -lt 10 ]; then
-  echo "🛑 Commit message must be at least 10 characters long."
+if [ ${#commit_msg} -lt 20 ]; then
+  echo "🛑 Commit message must be at least 20 characters long."
   exit 1
 fi
+
+echo "🟢 Commit message has the required minimum length."
