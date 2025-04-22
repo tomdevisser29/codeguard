@@ -3,18 +3,14 @@
 commit_msg_file="$1"
 commit_msg=$(cat "$commit_msg_file")
 
-# Check if the commit message starts with "Added", "Changed", or "Fixed"
-if ! echo "$commit_msg" | grep -qE '^(Added|Changed|Fixed)'; then
-  echo "🛑 Commit message must start with 'Added', 'Changed', or 'Fixed'."
+if ! echo "$commit_msg" | grep -qE '^(Added|Changed|Fixed|Removed)'; then
+  echo "🛑 Commit message must start with 'Added', 'Changed', 'Removed' or 'Fixed'."
   exit 1
 fi
-
 echo "🟢 Commit message has the correct prefix."
 
-# Check if the commit message is at least 10 characters long
 if [ ${#commit_msg} -lt 20 ]; then
   echo "🛑 Commit message must be at least 20 characters long."
   exit 1
 fi
-
 echo "🟢 Commit message has the required minimum length."
