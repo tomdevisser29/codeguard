@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\"",
     "prepare": "husky",
-    "prettier": "prettier --check **/*.js"
+    "prettier": "prettier --check **/*.js",
+    "phpcs": "vendor/bin/phpcs --standard=phpcs.xml"
   },
   "keywords": [],
   "author": "",

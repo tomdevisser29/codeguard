@@ -6,3 +6,10 @@ if ! npm run prettier; then
 fi
 
 echo "🟢 Prettier check is successful."
+
+if ! npm run phpcs; then
+  echo "🛑 PHPCS check failed. Remember to re-stage the files after fixing them."
+  exit 1
+fi
+
+echo "🟢 PHPCS check is successful."
