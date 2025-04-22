@@ -11,3 +11,9 @@ if ! npm run phpcs; then
   exit 1
 fi
 echo "🟢 PHPCS check is successful."
+
+if ! npm run eslint; then
+  echo "🛑 ESLint check failed. Remember to re-stage the files after fixing them."
+  exit 1
+fi
+echo "🟢 ESLint check is successful."
