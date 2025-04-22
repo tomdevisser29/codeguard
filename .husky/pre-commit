@@ -1,9 +1,8 @@
 #!/bin/sh
 
-npm run prettier
-if [ $? -ne 0 ]; then
+if ! npm run prettier; then
   echo "🛑 Prettier check failed. Remember to re-stage the files after fixing them."
   exit 1
-else
-  echo "🟢 Prettier check is successful."
 fi
+
+echo "🟢 Prettier check is successful."
