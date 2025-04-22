@@ -1,5 +1,6 @@
 <?php
 /**
- * This file should fail the PHPCS test.
+ * This file should pass the PHPCS test.
+ *
  * @package codeguard
  */
